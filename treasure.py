@@ -51,23 +51,30 @@ def back():
     if user == 'left':
         second = input('Swim or wait?\n')
         second = second.lower()
-        if second == ('wait'):
-            door = input('Which door? Red,Blue or Yellow\n')
-            door = door.lower()
-            if door == ('red'):
-                print('Burned by fire.\nGame Over.')
-            elif door == ('blue'):
-                print('Eaten by beasts.\nGame over.')
-            elif door == ('yellow'):
-                print('You Win!')
+        if second == 'wait':
+            while True:
+                door = input('Which door? Red,Blue or Yellow\n')
+                door = door.lower()
+                if door == 'red':
+                    print('Burned by fire.\nGame Over.')
+                    quit()
+                elif door == 'blue':
+                    print('Eaten by beasts.\nGame over.')
+                    quit()
+                elif door == 'yellow':
+                    print('You Win!')
+                    quit()
+                else:
+                    print('Invalid door choose again')
         else:
-            print('Attacked by sharks.\nGame over.')
+           print('Attacked by sharks.\nGame over.')
+           quit()        
     
     elif user == 'right':
 
         print('Found a treasure map showing a hole.')
         hole = input('Enter the hole for shortcut? Y or N\n')
-        hole = hole.lower
+        hole = hole.lower()
         if hole == 'y':
             print('Game over! You died!!')
             quit()
