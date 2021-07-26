@@ -32,16 +32,13 @@ scissors = '''
 # user turn
 choice=input('What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n')
 choice=int(choice)
-list=[rock,paper,scissors]
-try:
-    print(list[choice])
-except:
-    print('Invalid choice')
-    quit()    
-# Computer turn    
+game=[rock,paper,scissors]
+print(game[choice])   
+# Computer turn
+
 print('Computer chose:\n')
 computer=random.randint(0,2)
-print(list[computer])
+print(game[computer])
 
 #end statement
 def end():
